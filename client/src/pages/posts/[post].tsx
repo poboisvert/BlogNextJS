@@ -5,7 +5,7 @@ import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
 
 import matter from 'gray-matter';
 import { fetchPostContent } from '../../lib/posts';
-import BlogItem from '../../components/Blog/BlogItem';
+import BlogItem from '../../components/Blog/Item/BlogItem';
 
 import fs from 'fs';
 import yaml from 'js-yaml';
@@ -58,7 +58,7 @@ export default function Post({
   );
 }
 
-export const getStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths = async () => {
   const paths = fetchPostContent().map((it) => '/posts/' + it.slug);
   return {
     paths,
@@ -66,8 +66,8 @@ export const getStaticPaths = async () => {
   };
 };
 
-export const getStaticProps = async ({ params }) => {
-  const slug = params.post;
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const slug = params.post as string;
   const source = fs.readFileSync(slugToPostContent[slug].fullPath, 'utf8');
 
   const { content, data } = matter(source, {

@@ -1,38 +1,40 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-export const MiddleBlock = styled.section`
+export const BlockContainer = styled.div`
   position: relative;
-  padding: 7.5rem 0 3rem;
+  padding: 10rem 0 8rem;
 
-  text-align: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-
-  @media screen and (max-width: 768px) {
+  @media only screen and (max-width: 480px) {
     padding: 5.5rem 0 3rem;
   }
 `;
 
-export const Content = styled.p`
-  padding: 0.75rem 0 0.75rem;
-  font-size: 1.25rem;
+export const BlockWrap = styled.div`
+  display: flex;
+  flex-direction: column;
 
-  @media (max-width: 768px) {
+  @media only screen and (max-width: 480px) {
     width: 18rem;
     margin: 0 auto;
     font-size: 1rem;
   }
 `;
 
-export const ContentWrapper = styled.div`
-  max-width: 570px;
+export const BlockTitle = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  @media only screen and (max-width: 768px) {
+  font-size: 24px;
+
+  text-transform: uppercase;
+  color: #222323;
+
+  @media only screen and (max-width: 480px) {
     max-width: 100%;
   }
 `;
 
-export const Title = styled.h6`
-  text-decoration: none;
+export const BlockContent = styled.div`
+  padding: 20px;
 `;

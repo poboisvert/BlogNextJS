@@ -1,16 +1,9 @@
-import BlogList from '../../components/Blog/BlogList';
+import BlogList from '../../components/Blog/Layout/BlogList';
 
 import webconfig from '../../lib/webconfig';
-import GlobalStyles from '../../components/GlobalStyles';
-
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
 
 import { countPosts, listPostContent, PostContent } from '../../lib/posts';
 import { listTags, TagContent } from '../../lib/tags';
-
-// Common
-import Container from '../../common/Container';
 
 type Props = {
   posts: PostContent[];

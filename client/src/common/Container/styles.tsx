@@ -6,6 +6,7 @@ export const Container = styled.div`
 
   justify-content: center;
   align-items: center;
+
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -19,7 +20,7 @@ export const Container = styled.div`
   @media only screen and (max-width: 768px) {
     max-width: 700px;
   }
-  @media only screen and (max-width: 414px) {
-    max-width: 370px;
+  @media only screen and (max-width: 480px) {
+    max-width: 350px;
   }
 `;

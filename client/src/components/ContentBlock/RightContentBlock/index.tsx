@@ -1,11 +1,15 @@
-import { Row, Col } from "antd";
-import "antd/dist/antd.css";
+import Slide from 'react-reveal/Slide';
+import { SvgIcon } from '../../../common/SvgIcon';
+import { ContentBlockProps } from '../interfaces';
 
-import Slide from "react-reveal/Slide";
-import { SvgIcon } from "../../../common/SvgIcon";
-import { ContentBlockProps } from "../interfaces";
+import {
+  BlockContainer,
+  BlockWrap,
+  BlockContent,
+  BlockTitle,
+  BlockText,
+} from './styles';
 
-import { RightBlockContainer, Content, ContentWrapper } from "./styles";
 const RightBlock = ({
   title,
   content,
@@ -16,23 +20,21 @@ const RightBlock = ({
   first,
 }: ContentBlockProps) => {
   return (
-    <RightBlockContainer>
-      <Row>
-        <Col md={12}>
+    <BlockContainer id={id}>
+      <BlockWrap>
+        <BlockContent>
           <Slide left>
-            <ContentWrapper>
-              <h6>{title}</h6>
-              <Content>{content}</Content>
-            </ContentWrapper>
+            <BlockTitle>{title}</BlockTitle>
+            <BlockText>{content}</BlockText>
           </Slide>
-        </Col>
-        <Col md={12}>
+        </BlockContent>
+        <BlockContent>
           <Slide right>
-            <SvgIcon src={icon} width="300px" height="300px" />
+            <SvgIcon src={icon} height='300px' width='300px' />
           </Slide>
-        </Col>
-      </Row>
-    </RightBlockContainer>
+        </BlockContent>
+      </BlockWrap>
+    </BlockContainer>
   );
 };
 
