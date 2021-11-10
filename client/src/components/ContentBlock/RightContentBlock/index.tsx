@@ -1,4 +1,3 @@
-import Slide from 'react-reveal/Slide';
 import { SvgIcon } from '../../../common/SvgIcon';
 import { ContentBlockProps } from '../interfaces';
 
@@ -23,15 +22,11 @@ const RightBlock = ({
     <BlockContainer id={id}>
       <BlockWrap>
         <BlockContent>
-          <Slide left>
-            <BlockTitle>{title}</BlockTitle>
-            <BlockText>{content}</BlockText>
-          </Slide>
+          <BlockTitle>{title}</BlockTitle>
+          <BlockText>{content}</BlockText>
         </BlockContent>
         <BlockContent>
-          <Slide right>
-            <SvgIcon src={icon} height='300px' width='300px' />
-          </Slide>
+          <SvgIcon src={icon} height='300px' width='300px' />
         </BlockContent>
       </BlockWrap>
     </BlockContainer>

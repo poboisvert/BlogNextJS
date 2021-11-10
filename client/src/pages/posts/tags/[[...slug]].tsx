@@ -1,6 +1,6 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 
-import TagPostList from '../../../components/Blog/TagPostList';
+import TagPostList from '../../../components/Blog/TagPostList/TagPostList';
 import { countPosts, listPostContent, PostContent } from '../../../lib/posts';
 import { getTag, listTags, TagContent } from '../../../lib/tags';
 
